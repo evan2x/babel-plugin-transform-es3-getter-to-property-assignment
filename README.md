@@ -30,7 +30,7 @@ exports['foo'] = (function() {
 ## Installation
 
 ```
-$ npm install --save-dev babel-plugin-transform-es3-getter-to-assignment
+$ npm install --save-dev babel-plugin-transform-es3-getter-to-property-assignment
 ```
 
 ## Usage
@@ -39,16 +39,22 @@ $ npm install --save-dev babel-plugin-transform-es3-getter-to-assignment
 
 **.babelrc**
 
-```
+```json
 {
-  "plugins": ["transform-es3-getter-to-value"]
+  "plugins": ["transform-es3-getter-to-property-assignment"]
 }
 ```
 
 ### Via CLI
 
 ```
-{
-  "plugins": ["transform-es3-getter-to-value"]
-}
+babel --plugins transform-es3-getter-to-property-assignment
+```
+
+### Via Node API
+
+```js
+require("babel-core").transform("code", {
+  plugins: ["transform-es3-getter-to-property-assignment"]
+});
 ```

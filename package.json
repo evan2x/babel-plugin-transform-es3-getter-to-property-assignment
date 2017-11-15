@@ -1,0 +1,31 @@
+{
+  "name": "babel-plugin-transform-es3-getter-to-property-assignment",
+  "version": "1.0.0",
+  "description": "This plugin transforms Object.defineProperty getter to property assignment for Babel 6.x",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --require babel-core/register \"test/**/*.js\"",
+    "build": "rm -rf ./dist && babel ./src --out-dir ./dist",
+    "prepublish": "npm run build"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "babel-plugin",
+    "defineProperty"
+  ],
+  "author": "evan2x",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-helper-plugin-test-runner": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "babel-template": "^6.26.0"
+  }
+}

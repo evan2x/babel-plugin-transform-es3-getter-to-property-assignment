@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-es3-getter-to-property-assignment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin transforms Object.defineProperty getter to property assignment for Babel 6.x",
   "main": "dist/index.js",
   "scripts": {

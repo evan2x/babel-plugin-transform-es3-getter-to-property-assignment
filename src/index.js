@@ -28,13 +28,15 @@ export default function ({ types: t }) {
             });
 
             if (FunctionDecl && FunctionDecl.value) {
-              const node = buildProperty(
-                path.node.arguments[0],
-                t.stringLiteral(path.node.arguments[1].value),
-                t.callExpression(t.parenthesizedExpression(FunctionDecl.value), [])
-              );
+              if (path.node.arguments[1].value != null) {
+                const node = buildProperty(
+                  path.node.arguments[0],
+                  t.stringLiteral(path.node.arguments[1].value),
+                  t.callExpression(t.parenthesizedExpression(FunctionDecl.value), [])
+                );
 
-              path.replaceWith(node);
+                path.replaceWith(node);
+              }
             }
           }
         }
